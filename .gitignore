@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal sales/spec docs (not for public repo)
+/product-spec.md
+/lp-copy-outline.md
+/sales-deck.md

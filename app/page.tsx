@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -138,9 +139,10 @@ function Hero() {
         }}
         aria-hidden="true"
       />
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-20 pb-24 md:pt-28 md:pb-36">
-        <div className="max-w-3xl">
-          <SectionLabel>AI Kanban Musume</SectionLabel>
+      <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-16 pb-20 md:pt-24 md:pb-32">
+        <div className="grid gap-10 md:gap-12 md:grid-cols-2 md:items-center">
+          <div className="max-w-xl order-2 md:order-1">
+            <SectionLabel>AI Kanban Musume</SectionLabel>
           <h1 className="text-[28px] sm:text-4xl md:text-5xl font-bold leading-[1.35] md:leading-[1.3] tracking-tight">
             あなたの店のことを
             <br className="sm:hidden" />
@@ -169,9 +171,22 @@ function Hero() {
               プログラム詳細を見る
             </a>
           </div>
-          <p className="mt-8 text-xs text-neutral-500">
-            ※ 現在、月5名限定でソフトローンチ中です
-          </p>
+            <p className="mt-8 text-xs text-neutral-500">
+              ※ 現在、月5名限定でソフトローンチ中です
+            </p>
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5">
+              <Image
+                src="/hero.png"
+                alt="AI看板娘 - 店舗スタッフに寄り添うAIアシスタントのイメージ"
+                fill
+                priority
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
